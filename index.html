@@ -31,6 +31,7 @@
         a {
             color: #1a73e8;
             text-decoration: none;
+            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
@@ -46,24 +47,29 @@
             text-align: center;
             font-size: 0.9em;
             color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 1em;
+        }
+        .website-link {
+            background-color: #e3f2fd;
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px solid #bbdefb;
         }
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            p, li {
-                font-size: 0.9em;
-            }
+            body { padding: 10px; }
+            h1 { font-size: 1.5em; }
+            p, li { font-size: 0.9em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Notepad App Data Deletion Request</h1>
-        <p><strong>Last Updated: August 25, 2025</strong></p>
+        <p><strong>Last Updated: January 19, 2026</strong></p>
+
         <p>Notepad by JoshTechApps allows you to request deletion of your account and associated data. This includes notes backed up to Google Drive. Follow the steps below to submit a deletion request.</p>
 
         <h2>How to Request Data Deletion</h2>
@@ -74,12 +80,31 @@
             <li><strong>Retention Period</strong>: Cloud backup data is not retained after processing your deletion request. Local data persists until app uninstallation.</li>
             <li><strong>Verification</strong>: We may contact you to verify your identity to ensure the security of your request.</li>
         </ul>
+
         <p><strong>Note</strong>: Uninstalling the app will delete all local data (notes, passwords, preferences) but will not affect Google Drive backups unless a deletion request is submitted.</p>
-        <p>For additional assistance or to view our full privacy policy, visit <a href="https://github.com/JoashTech/Notepad-private-policy">our Privacy Policy</a> or contact us at <a href="mailto:contactjoshtech@gmail.com">contactjoshtech@gmail.com</a>.</p>
+
+        <p>For additional assistance or to view our full privacy policy, visit:</p>
+
+        <div class="website-link">
+            <a href="https://joshtechapps.netlify.app" target="_blank">
+                Visit Our Website For More
+            </a>
+        </div>
+
+        <p>You can also view our full privacy policy directly here: 
+            <a href="https://raw.githubusercontent.com/JoashTech/Notepad-private-policy/main/index.html" target="_blank">
+                View Full Privacy Policy
+            </a>
+        </p>
 
         <div class="footer">
-            <p>&copy; 2025 JoshTechApps. All rights reserved.</p>
+            © <span id="currentYear"></span> JoshTechApps. All rights reserved.
         </div>
     </div>
+
+    <script>
+        // Automatically set current year (single year only)
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
